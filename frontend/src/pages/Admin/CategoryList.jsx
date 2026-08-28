@@ -73,7 +73,7 @@ const CategoryList = () => {
         console.log(err)
       }
     }}
-    handleDelete={() => {
+    handleDelete = { async () => {
       try{
         await deleteCategory(selectedCategory._id).unwrap()
         setSelectedCategory(null)
